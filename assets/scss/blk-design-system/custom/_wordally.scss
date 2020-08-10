@@ -1,0 +1,29 @@
+.delete-btn-style {
+    position: absolute;
+    right: -24px;
+    top: 5px;
+    cursor: pointer;
+    padding: 5px 5px 5px 10px;
+}
+
+.delete-btn-style:hover {
+    color: #FF1A1A;
+}
+
+.add-new-field-btn-style {
+    margin-top: 5%;
+    font-size: 25px;
+}
+
+.add-new-field-btn-style:hover {
+    color: #1BFF1B;
+    cursor: pointer;
+}
+
+.center-block-elements {
+    text-align: center !important;
+}
+
+.blank-space {
+    margin-bottom: 3%;
+}
