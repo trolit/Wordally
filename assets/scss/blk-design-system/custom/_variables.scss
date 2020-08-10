@@ -96,9 +96,9 @@ $colors: map-merge((
 $default-color-opacity:      rgba(182, 182, 182, .6) !default;
 $orange-color:               #f96332 !default;
 
-$default:       #344675 !default;
-$primary:       #e14eca !default;
-$secondary:     #f4f5f7 !default;
+$default:       #FBB9B1 !default;
+$primary:       #FBB9B1 !default;
+$secondary:     #FBB9B1 !default;
 $success:       #00f2c3 !default;
 $info:          #1d8cf8 !default;
 $warning:       #ff8d72 !default;
@@ -108,7 +108,7 @@ $black:         #222a42 !default;
 
 // gradient
 $default-states:       #263148 !default;
-$primary-states:       #ba54f5 !default;
+$primary-states:       #F77868 !default;
 $success-states:       #0098f0 !default;
 $info-states:          #3358f4 !default;
 $warning-states:       #ff6491 !default;
@@ -580,13 +580,13 @@ $input-border-radius-sm:                $border-radius-sm !default;
 $input-bg:                              $transparent-bg !default;
 $input-disabled-bg:                     $gray-200 !default;
 
-$input-muted-bg:                        #EDF0F5 !default;
+$input-muted-bg:                        #F77868 !default;
 
 $input-alternative-box-shadow:          0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
 $input-focus-alternative-box-shadow:    0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
 
 $input-color:                           $opacity-8 !default;
-$input-border-color:                    #cad1d7 !default;
+$input-border-color:                    #F77868 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // 0 1px 3px 0 $gray-400 !default;
 
@@ -718,7 +718,7 @@ $nav-pills-border-color:            theme-color("primary") !default;
 $nav-pills-border-radius:           $border-radius !default;
 
 $nav-pills-link-color:              theme-color("primary") !default;
-$nav-pills-link-hover-color:        darken(theme-color("primary"), 5%);
+$nav-pills-link-hover-color:        darken(theme-color("primary"), 1%);
 $nav-pills-link-active-color:       color-yiq(theme-color("primary"));
 $nav-pills-link-active-bg:          theme-color("primary") !default;
 $nav-pills-box-shadow:              $btn-box-shadow !default;
