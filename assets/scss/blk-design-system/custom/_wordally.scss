@@ -1,9 +1,21 @@
-.delete-btn-style {
-    position: absolute;
-    right: -24px;
-    top: 5px;
-    cursor: pointer;
-    padding: 5px 5px 5px 10px;
+@media only screen and (min-width: 761px) {
+    .delete-btn-style {
+        position: absolute;
+        right: 170px;
+        top: 5px;
+        cursor: pointer;
+        padding: 5px 5px 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .delete-btn-style {
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        cursor: pointer;
+        padding: 5px 5px 5px 10px;
+    }
 }
 
 .delete-btn-style:hover {
