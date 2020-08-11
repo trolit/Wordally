@@ -48,12 +48,12 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a id="firstTestTab" class="nav-link" data-toggle="tab" href="#link5" role="tablist">
+                      <a id="hiddenTranslationTab" class="nav-link" data-toggle="tab" href="#link5" role="tablist">
                         Studying from side A to B
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#link6" role="tablist">
+                      <a id="hiddenWordTab" class="nav-link" data-toggle="tab" href="#link6" role="tablist">
                         Studying from side B to A
                       </a>
                     </li>
@@ -85,14 +85,14 @@
                       <br/>
                       <div class="row">
                         <div class="col-md-12">
-                          <button class="btn btn-primary next-tab-btn" onclick="changeActiveTab('firstTestTab', 'from:Tab1|to:Tab2')">Next</button>
+                          <button class="btn btn-primary next-tab-btn" onclick="changeActiveTab('hiddenTranslationTab', 'from:Tab1|to:Tab2')">Next</button>
                         </div>
                       </div>
                     </div>
                     <div class="tab-pane" id="link5">
-                      <h2 class="text-center">words <span class="iconify" data-icon="heroicons-outline:arrow-narrow-right" data-inline="false"></span> translations</h2>
                       <div class="row text-center">
                         <div class="col-md-12">
+                          <h2 class="text-center">words <span class="iconify" data-icon="heroicons-outline:arrow-narrow-right" data-inline="false"></span> translations</h2>
                           <small>Read word and try to tell it's translation</small>
                         </div>
                       </div>
@@ -101,7 +101,11 @@
                         <div id="readOnlyFields_Section1" class="col-md-12">
                         </div>
                       </div>
-                      <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('defaultTab', 'to:DefaultTab')">Back</button>
+                      <div class="row">
+                        <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('defaultTab', 'to:DefaultTab')">Back</button>
+                        <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all translations" onclick="hideAllTranslations()">Try again</button>
+                        <button class="btn btn-primary next-tab-btn ml-auto btn-sm" onclick="changeActiveTab('hiddenWordTab', 'from:Tab2|to:Tab3')">Next</button>
+                      </div>
                     </div>
                     <div class="tab-pane" id="link6">
                       <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
