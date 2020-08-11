@@ -32,10 +32,25 @@
     cursor: pointer;
 }
 
-.center-block-elements {
-    text-align: center !important;
-}
-
 .blank-space {
     margin-bottom: 3%;
+}
+
+.next-tab-btn {
+    float: right;
+    margin-right: 4%;
+}
+
+.back-tab-btn {
+    float: left;
+    margin-left: 4%;
+}
+
+.alert-fixed {
+    position:fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%;
+    z-index:9999; 
+    border-radius:0px
 }
