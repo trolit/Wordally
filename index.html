@@ -27,7 +27,7 @@
       <div class="squares square3"></div>
       <div class="container">
         <div class="content-center brand" style="height: 50vh; padding: 60px 0; text-align: center;">
-		      <i class="tim-icons icon-puzzle-10 faa-bounce animated-hover" style="font-size: 50px; margin-bottom: 2%; color: #FBB9B1;"></i><br/>
+		      <i class="tim-icons icon-puzzle-10 faa-bounce animated-hover" style="font-size: 60px; margin-bottom: 2%; color: #FBB9B1;"></i><br/>
           <h1 class="h1-seo">Wordally</h1>
           <h5>Move your vocabulary learning experience on higher level</h5>
         </div>
@@ -41,7 +41,7 @@
               <!-- Tabs with Background on Card -->
               <div class="card">
                 <div class="card-header">
-                  <ul class="nav nav-tabs nav-tabs-primary" role="tablist">
+                  <ul class="nav d-none nav-tabs nav-tabs-primary" role="tablist">
                     <li class="nav-item">
                       <a id="defaultTab" class="nav-link active" data-toggle="tab" href="#link4" role="tablist">
                         Define words
@@ -62,12 +62,14 @@
                 <div class="card-body">
                   <!-- Tab panes -->
                   <div class="tab-content tab-space">
+                    <!-- SECTION: Wordally SETUP -->
                     <div class="tab-pane active" id="link4">
-                      <h2 class="text-center">Setup Wordally</h2>
+                      <h2 class="text-center text-muted mb-0">Step 1</h2>
+                      <h4 class="text-center">Setup Wordally</h4>
                       <div class="row text-center">
                         <div class="col-md-12">
                           Write at least 3 words before going to the next step<br/>
-                          <small>Translations must be given manually due to translating services API limits.</small>
+                          <small>Translations must be given manually due to translating services API limits :(</small>
                         </div>
                       </div>
                       <br/>
@@ -77,7 +79,7 @@
                       </div>
                       <div class="row text-center">
                         <div class="col-md-12">
-                          <i class="tim-icons icon-simple-add add-new-field-btn-style faa-shake animated-hover" onclick="renderInputFields()"></i>
+                          <i class="tim-icons icon-simple-add add-new-field-btn-style faa-shake animated-hover" onclick="createPairOfInputFields()"></i>
                           <br/>
                           <small>Add new field</small>
                         </div>
@@ -85,28 +87,32 @@
                       <br/>
                       <div class="row">
                         <div class="col-md-12">
-                          <button class="btn btn-primary next-tab-btn" onclick="changeActiveTab('hiddenTranslationTab', 'from:Tab1|to:Tab2')">Next</button>
+                          <button class="btn btn-primary next-tab-btn" onclick="changeActiveTab('hiddenTranslationTab')">Next</button>
                         </div>
                       </div>
                     </div>
+                    <!-- SECTION: GUESSING TRANSLATIONS -->
                     <div class="tab-pane" id="link5">
                       <div class="row text-center">
                         <div class="col-md-12">
-                          <h2 class="text-center">words <span class="iconify" data-icon="heroicons-outline:arrow-narrow-right" data-inline="false"></span> translations</h2>
-                          <small>Read word and try to tell it's translation</small>
+                          <h2 class="text-center text-muted mb-0">Step 2</h2>
+                          <h4 class="text-center">words <span class="iconify" data-icon="heroicons-outline:arrow-narrow-right" data-inline="false"></span> translations</h4>
+                          Read word and try to guess it's translation<br/>
+                          <small>Repeat this exercie few times until you feel confident with all given words.</small>
                         </div>
                       </div>
                       <br/>
                       <div class="row">
-                        <div id="readOnlyFields_Section1" class="col-md-12">
+                        <div id="hiddenTranslationTabTable" class="col-md-12">
                         </div>
                       </div>
                       <div class="row">
-                        <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('defaultTab', 'to:DefaultTab')">Back</button>
+                        <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('defaultTab')">Back</button>
                         <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all translations" onclick="hideAllTranslations()">Try again</button>
-                        <button class="btn btn-primary next-tab-btn ml-auto btn-sm" onclick="changeActiveTab('hiddenWordTab', 'from:Tab2|to:Tab3')">Next</button>
+                        <button class="btn btn-primary next-tab-btn ml-auto btn-sm" onclick="changeActiveTab('hiddenWordTab')">Next</button>
                       </div>
                     </div>
+                    <!-- SECTION: GUESSING WORDS -->
                     <div class="tab-pane" id="link6">
                       <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
                     </div>
