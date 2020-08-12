@@ -61,6 +61,10 @@ function supplyTabWithInputs(collection, mode) {
         $("#readOnlyFields_Section1").empty();
     }  
     createTable(collection, mode);
+function clearSectionIfNotEmpty(id) {
+    if(document.getElementById(id).childElementCount > 0) {
+        $(`#${id}`).empty();
+    }
 }
 
 function hideAllTranslations() {
