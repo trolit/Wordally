@@ -57,6 +57,16 @@
                         Studying from side B to A
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a id="testKnowledgeTab" class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                        Test
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="testResultsTab" class="nav-link" data-toggle="tab" href="#link8" role="tablist">
+                        Test
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div class="card-body">
@@ -114,7 +124,91 @@
                     </div>
                     <!-- SECTION: GUESSING WORDS -->
                     <div class="tab-pane" id="link6">
-                      <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+                      <div class="row text-center">
+                        <div class="col-md-12">
+                          <h2 class="text-center text-muted mb-0">Step 3</h2>
+                          <h4 class="text-center">words <span class="iconify" data-icon="heroicons-outline:arrow-narrow-left" data-inline="false"></span> translations</h4>
+                          Read translation and try to guess it's word<br/>
+                          <small>Repeat this exercie few times until you feel confident with all given words.</small>
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="row">
+                        <div id="hiddenWordTabTable" class="col-md-12">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('hiddenTranslationTab')">Back</button>
+                        <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all words" onclick="hideAllWords()">Try again</button>
+                        <button class="btn btn-primary next-tab-btn ml-auto btn-sm" onclick="changeActiveTab('testKnowledgeTab')">Next</button>
+                      </div>
+                    </div>
+                    <!-- SECTION: VERIFICATION -->
+                    <div class="tab-pane" id="link7">
+                      <div class="row text-center">
+                        <div class="col-md-12">
+                          <h2 class="text-center text-muted mb-0">Step 4</h2>
+                          <h4 class="text-center">Verification</h4>
+                          Test your knowledge by writing word for corresponding translation.<br/>
+                          <small>For better effect, repeat this at least 3 times per day.</small>
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="row">
+                        <div id="verifyKnowledgeSection" class="col-md-12">
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="row">        
+                        <div class="col-md-12">
+                          <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('hiddenWordTab')">Back</button>
+                          <div class="ml-auto">
+                            <button class="btn btn-success verify-btn" onclick="changeActiveTab('testResultsTab')">Verify</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- SECTION: RESULTS -->
+                    <div class="tab-pane" id="link8">
+                      <div class="row text-center">
+                        <div class="col-md-12">
+                          <h2 class="text-center text-muted mb-0">Step 5</h2>
+                          <h3 class="text-center">Verification results</h3>
+                          <span class="iconify" data-icon="bx:bx-happy-alt" data-inline="false" style="font-size: 35px;"></span><br/>
+                          Review your progress<br/>
+                          <small>If you need to learn vocabulary, repeat this scheme at least 3 times to improve your terminology learning skills!</small>
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <span class="iconify" data-icon="icomoon-free:trophy" data-inline="false" style="font-size: 20px;"></span><br/>
+                          <h4 class="mb-0">Overall score</h4>
+                          <h5 id="scoreText" class="text-center">10/30</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <hr class="hr-style">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <span class="iconify" data-icon="ic:baseline-question-answer" data-inline="false" style="font-size: 20px;"></span><br/>
+                          <h4>Your answers</h4>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div id="verificationResultsSection" class="col-md-12">
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="row">        
+                        <div class="col-md-12">
+                          <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('testKnowledgeTab')">Back</button>
+                          <button id="genURLbtn" data-clipboard-text="n/o" class="btn btn-danger generate-url-btn" onclick="generateUrl()" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Click this button to copy URL with words & translations so the next time you use Wordally, you won't have to setup it again.">Generate URL</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
