@@ -116,8 +116,30 @@ function showTranslationTab(tabId) {
     }
 }
 
+var clipboard;
+
 $(document).ready(function(){
     $('[rel=tooltip]').tooltip({ trigger: "hover" });
+    clipboard = new ClipboardJS('#genURLbtn');
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    });
+
+    var url = window.location.href;
+    if(url.includes('?')) {
+        let params = new URLSearchParams(url);
+        var words = params.getAll('word');
+        var translations = params.getAll('translation');
+
+        for(var i = 0; i < 3; i++) {
+            console.log(words[i] + ' ' + translations[i]);
+            createPairOfInputFields(words[i], translations[i]);
+        }
+    } else {
+        createPairOfInputFields()
+        createPairOfInputFields()
+        createPairOfInputFields()
+    }
 });
 
 // mode = normal (A visible, B hidden)
@@ -146,4 +168,24 @@ function hideAllWords() {
     createTableForSection('hiddenWordTabTable', translations, 'word');
 }
 
+function generateUrl() {
+    var url = window.location.href + '?';
+    // source: https://stackoverflow.com/questions/814613/how-to-read-get-data-from-a-url-using-javascript/55576345#55576345
+    // https://www.example.com?&name=n1&name=n2&
+    // no & after ? and at the end results in not reading them :( TODO
+    var words = document.getElementsByClassName('wordally_word');
+    var translations = document.getElementsByClassName('wordally_translation');
+
+    var parameters = '';
+    for(var i = 0; i < words.length; i++) {
+        parameters += `&word=${words[i].value}&translation=${translations[i].value}&`
+    }
+
+    url += parameters;
+
+    copyToClipBoard(url);
+}
+
+function copyToClipBoard(data) {
+    document.getElementById('genURLbtn').setAttribute('data-clipboard-text', data)
 }
