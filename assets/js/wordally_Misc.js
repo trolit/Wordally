@@ -35,8 +35,22 @@ function showTranslationTab(tabId) {
     var translations = document.getElementsByClassName('wordally_translation');
     var counter = 0;
     for(var i = 0; i < words.length; i++) {
-        if(words[i].value.trim() != '' && translations[i].value.trim() != '') {
+        var word = words[i].value.trim();
+        var translation = translations[i].value.trim();
+        if(word != '' && translation != '') {
             counter++;
+        } else {
+            if(word == '' && translation == '') {
+                renderAlert(`Please fill in word & translation fields for row: ${i + 1}.`);
+            }
+            else if(word == '') {
+                renderAlert(`Please fill in word field for translation: ${translation}.`);
+            } 
+            else if (translation == '') {
+                renderAlert(`Please fill in translation field for word: ${word}.`);
+            }
+            audio.play();
+            return;
         }
     }
     if(counter < 3) {
@@ -45,7 +59,7 @@ function showTranslationTab(tabId) {
     } else {
         tryToCloseAlert();
         $(`#${tabId}`).tab('show');
-        supplyTabWithInputs(words, 'translation');
+        createTableForSection('hiddenTranslationTabTable', words, 'translation');
     }
 }
 
