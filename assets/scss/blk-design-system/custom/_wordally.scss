@@ -36,7 +36,7 @@
     margin-bottom: 3%;
 }
 
-.next-tab-btn {
+.next-tab-btn, .verify-btn, .generate-url-btn {
     float: right;
     margin-right: 4%;
 }
@@ -58,4 +58,18 @@
     width: 100%;
     z-index:9999; 
     border-radius:0px
+}
+
+.wrong-answer-style {
+    color: #FF0000;
+}
+
+.correct-answer-style {
+    color: #A5D765;
+}
+
+.hr-style {
+    border-color: #8B9DC3;
+    margin: 1% auto 1% auto;
+    width: 150px;
 }
