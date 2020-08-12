@@ -56,11 +56,11 @@ $(document).ready(function(){
 // mode = normal (A visible, B hidden)
 //      = inverted (A hidden, B visible)
 
-function supplyTabWithInputs(collection, mode) {
-    if(document.getElementById("readOnlyFields_Section1").childElementCount > 0) {
-        $("#readOnlyFields_Section1").empty();
-    }  
-    createTable(collection, mode);
+function createTableForSection(id, collection, mode) {
+    clearSectionIfNotEmpty(id);
+    createTable(id, collection, mode);
+}
+
 function clearSectionIfNotEmpty(id) {
     if(document.getElementById(id).childElementCount > 0) {
         $(`#${id}`).empty();
@@ -70,5 +70,5 @@ function clearSectionIfNotEmpty(id) {
 function hideAllTranslations() {
     $("[data-toggle='tooltip']").tooltip('hide');
     var words = document.getElementsByClassName('wordally_word');
-    supplyTabWithInputs(words, 'translation');
+    createTableForSection('hiddenTranslationTabTable', words, 'translation');
 }
