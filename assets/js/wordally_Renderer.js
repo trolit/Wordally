@@ -12,7 +12,7 @@ function renderDeleteTool()
     return icon;
 }
 
-function createTable(collection, category) {
+function createTable(id, collection, category) {
     var div = document.createElement('div');
     div = setBasicParameters(div, 'row')
 
@@ -48,7 +48,7 @@ function createTable(collection, category) {
     table.appendChild(tbody);
     div.appendChild(table);
 
-    renderElementOnPage(div, 'readOnlyFields_Section1');
+    renderElementOnPage(div, id);
 }
 
 function createTableData(data) {
@@ -81,7 +81,7 @@ function revealText(element, category, number) {
     }
 }
 
-function renderInputFields() {
+function createPairOfInputFields(word = 'empty', translation = 'empty') {
     var div = document.createElement('div');
     div = setBasicParameters(div, 'blank-space row')
 
@@ -91,28 +91,61 @@ function renderInputFields() {
     var translationInputDiv = document.createElement('div');
     translationInputDiv.setAttribute('class', 'col-md-4 mr-auto');
 
-    var wordInput = document.createElement('input');
-    wordInput.setAttribute('class', 'form-control wordally_word');
-    wordInput.setAttribute('maxlength', '30');
-    wordInput.type = 'text';
-    wordInput.value = 'hi'
-    wordInput.placeholder = 'word';
-    
+    var wordInput = createInputField('form-control wordally_word', 30, 'text', 'word', word);
+
     wordInputDiv.appendChild(wordInput);
 
-    var translationInput = document.createElement('input');
-    translationInput.setAttribute('class', 'form-control wordally_translation');
-    translationInput.setAttribute('maxlength', '30');
-    translationInput.type = wordInput.type;
-    translationInput.value = 'eee'
-    translationInput.placeholder = 'translation';
-
+    var translationInput = createInputField('form-control wordally_translation', 30, 'text', 'translation', translation);
+    
     translationInputDiv.appendChild(translationInput);
 
     div.appendChild(wordInputDiv);
     div.appendChild(translationInputDiv);
     div.appendChild(renderDeleteTool());
     renderElementOnPage(div, 'inputFields_Section')
+}
+
+function createInputField(classes, maxlength, type, placeholder, text = 'empty') {
+    var input = document.createElement('input');
+    input.setAttribute('class', classes);
+    input.setAttribute('maxlength', maxlength);
+    input.type = type;
+    input.placeholder = placeholder;
+    input.value = text == 'empty' ? '' : text;
+    // testing purposes
+    // input.value = 'test';
+    return input;
+}
+
+function createVerificationElement(labelText) {
+    var div = document.createElement('div');
+    div.setAttribute('class', 'form-group col-md-5 mx-auto');
+    var label = document.createElement('label');
+    label.setAttribute('class', 'verification-label')
+    label.textContent = labelText;
+    var input = createInputField('form-control verification-input', 30, 'text', 'word');
+    div.appendChild(label);
+    div.appendChild(input);
+    return div;
+}
+
+function createUnorderedList() {
+    var ul = document.createElement('ul');
+    ul.setAttribute('class', 'text-center');
+    ul.setAttribute('style', 'padding-left: 0;');
+    return ul;
+}
+
+function createCorrectListItem(translation, word) {
+    var li = document.createElement('li');
+    li.innerHTML = `${translation} <span class="iconify" data-icon="gg:arrow-long-right-l"></span> <span class="correct-answer-style">${word}</span>`;
+    return li;
+}
+
+function createInCorrectListItem(translation, word, correctWord) {
+    var li = document.createElement('li');
+    li.innerHTML = `${translation} <span class="iconify" data-icon="gg:arrow-long-right-l"></span> <span class="wrong-answer-style">${word}</span> (correct: ${correctWord})`
+    return li;
 }
 
 function setBasicParameters(element, classes)
