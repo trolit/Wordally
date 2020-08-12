@@ -21,13 +21,66 @@ function removeElementByParentId(elementId) {
 
 var audio = new Audio('assets/sounds/alert-notification.mp3');
 
-function changeActiveTab(tabId, direction) {
-    if(direction == 'from:Tab1|to:Tab2') {
+function changeActiveTab(tabId) {
+    if(tabId == 'hiddenTranslationTab') {
         showTranslationTab(tabId);
     }
-    else if (direction == 'to:DefaultTab') {
+    else if (tabId == 'hiddenWordTab') {
+        $(`#${tabId}`).tab('show');
+        var translations = document.getElementsByClassName('wordally_translation');
+        createTableForSection('hiddenWordTabTable', translations, 'word');
+    }
+    else if (tabId == 'testKnowledgeTab') {
+        $(`#${tabId}`).tab('show');
+        createVerificationContent();
+    }
+    else if (tabId == 'defaultTab') {
         $(`#${tabId}`).tab('show');
     }
+    else if (tabId = 'testResultsTab') {
+        $(`#${tabId}`).tab('show');
+        verifyResults();
+    }
+}
+
+function createVerificationContent() {
+    clearSectionIfNotEmpty('verifyKnowledgeSection');
+    var translations = document.getElementsByClassName('wordally_translation');
+    for(var i = 0; i < translations.length; i++) {
+        var element = createVerificationElement(translations[i].value);
+        renderElementOnPage(element, 'verifyKnowledgeSection');
+    }
+}
+
+function verifyResults() {
+    var id = 'verificationResultsSection';
+    var labels = document.getElementsByClassName('verification-label');
+    var inputs = document.getElementsByClassName('verification-input');
+    var words = document.getElementsByClassName('wordally_word');
+    
+    var ul = createUnorderedList();
+
+    var correctAnswersCounter = 0;
+
+    for(var i = 0; i < words.length; i++) {
+        var element;
+        var input = inputs[i].value.toLowerCase().trim();
+        var word = words[i].value.toLowerCase().trim();
+        if(input == word) {
+            element = createCorrectListItem(labels[i].textContent, input);
+            correctAnswersCounter++;
+        } else {
+            if(input == '') {
+                input = 'no answer';
+            }
+            element = createInCorrectListItem(labels[i].textContent, input, word);
+        }
+        ul.appendChild(element);
+    }
+    $("#scoreText").text(`${correctAnswersCounter} / ${words.length}`);
+
+    clearSectionIfNotEmpty(id);
+    renderElementOnPage(ul, id);
 }
 
 function showTranslationTab(tabId) {
@@ -85,4 +138,12 @@ function hideAllTranslations() {
     $("[data-toggle='tooltip']").tooltip('hide');
     var words = document.getElementsByClassName('wordally_word');
     createTableForSection('hiddenTranslationTabTable', words, 'translation');
+}
+
+function hideAllWords() {
+    $("[data-toggle='tooltip']").tooltip('hide');
+    var translations = document.getElementsByClassName('wordally_translation');
+    createTableForSection('hiddenWordTabTable', translations, 'word');
+}
+
 }
