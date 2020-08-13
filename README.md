@@ -31,6 +31,7 @@
 - <a href="https://l-lin.github.io/font-awesome-animation/">Font Awesome Animation</a>
 - <a href="https://iconify.design/">Iconify icons</a>
 - <a href="https://nucleoapp.com/">Nucleo icons(shared by Creative Tim)</a>
+- <a href="http://www.orangefreesounds.com/message-notification/">Error sound(licensed under CC BY-NC 4.0)</a>
 
 <h3>License</h3>
 
