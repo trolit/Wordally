@@ -169,7 +169,12 @@ function hideAllWords() {
 }
 
 function generateUrl() {
-    var url = window.location.href + '?';
+    var url = window.location.href;
+    if(url.includes('?')) {
+        url = url.split('?')[0];
+    }
+    url += '?';
+
     // source: https://stackoverflow.com/questions/814613/how-to-read-get-data-from-a-url-using-javascript/55576345#55576345
     // https://www.example.com?&name=n1&name=n2&
     // no & after ? and at the end results in not reading them :( TODO
@@ -178,7 +183,7 @@ function generateUrl() {
 
     var parameters = '';
     for(var i = 0; i < words.length; i++) {
-        parameters += `&word=${words[i].value}&translation=${translations[i].value}&`
+        parameters += `&word=${words[i].value}&translation=${translations[i].value}`
     }
 
     url += parameters;
