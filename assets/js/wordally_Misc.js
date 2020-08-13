@@ -8,15 +8,6 @@ function removeElementByParentId(elementId) {
     if(element != null) {
         element.parentNode.removeChild(element);
     }
-    // TODO
-    if(document.getElementsByClassName('ezGitPart').length <= 0) {
-        changeElementsVisiblity(codeGenButton);
-        document.getElementById('resetButton').disabled = true;
-
-        if(startingNoteRef.classList.contains('hide')) {
-            startingNoteRef.classList.remove('hide');
-        }
-    }
 }
 
 var audio = new Audio('assets/sounds/alert-notification.mp3');
