@@ -147,9 +147,6 @@ $(document).ready(function(){
     hideWordsBtn = document.getElementById('hideAllWordsBtn');
 });
 
-// mode = normal (A visible, B hidden)
-//      = inverted (A hidden, B visible)
-
 function createTableForSection(id, collection, mode) {
     clearSectionIfNotEmpty(id);
     createTable(id, collection, mode);
