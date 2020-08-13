@@ -6,6 +6,12 @@
  
 > Method relies on 3 steps. In first two, cover one column and try to guess hidden words by looking at visible column, then swap(do the same for opposite column). If you don't know something, don't worry just repeat that step few times. It's also worth to not guess words in the same order. In last step, write translations on sheet of paper(again, don't always write them in the same order) and then try to write all words. It's that simple. By doing that method at least 3 times(with breaks between each try) it's possible to learn terminology in 30 minutes(motivation also matters) :) </p>
 
+<h3>Notes</h3>
+
+- If you want to check Wordally, click on <a href="https://trolit.github.io/Wordally/?&word=dog&translation=pies&word=cat&translation=kot&word=ogre&translation=ogr&word=pigeon&translation=gołąb&word=monster&translation=potwór&word=fire&translation=ogień&word=kitchen&translation=kuchnia&word=house&translation=dom&word=shoot&translation=strzelać">this link</a> (it includes parameters in URL so you won't have to write words and translations manually, they will be added automatically)
+- Primarily I wanted to make user only type words while translations would be served by Marak's <a href="https://github.com/marak/translate.js/">translate.js</a> library but didn't notice that it's old solution and Google API used there was depracated. Now when Google API is limited to "quota cost", I've decided that Wordally will require to write those translations manually. However, after finishing all steps you can generate URL for your word/translation template and when you use that generated URL JavaScript will will those inputs for you! 
+- Test it on phone:P  
+
 <h3>Screenshots</h3>
 
 | | |
