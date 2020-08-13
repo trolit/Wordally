@@ -130,7 +130,7 @@
                       <br/>
                       <div class="row">
                         <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('defaultTab')">Back</button>
-                        <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all translations" onclick="hideAllTranslations()">Try again</button>
+                        <button id="hideAllTranslationsBtn" class="btn btn-info refresh-btn disabled" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all translations" onclick="hideAllTranslations()">Try again</button>
                         <button class="btn btn-primary next-tab-btn ml-auto btn-sm" onclick="changeActiveTab('hiddenWordTab')">Next</button>
                       </div>
                     </div>
@@ -153,7 +153,7 @@
                       <br/>
                       <div class="row">
                         <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('hiddenTranslationTab')">Back</button>
-                        <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all words" onclick="hideAllWords()">Try again</button>
+                        <button id="hideAllWordsBtn" class="btn btn-info refresh-btn disabled" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all words" onclick="hideAllWords()">Try again</button>
                         <button class="btn btn-primary next-tab-btn ml-auto btn-sm" onclick="changeActiveTab('testKnowledgeTab')">Next</button>
                       </div>
                     </div>

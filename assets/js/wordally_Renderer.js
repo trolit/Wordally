@@ -75,8 +75,10 @@ function createActionButton(element, category, number) {
 // Category {word, translation}
 function revealText(element, category, number) {
     if(category == 'translation') {
+        removeClassDisableOnCondition(hideTranslationsBtn);
         element.textContent = document.getElementsByClassName('wordally_translation')[number].value;
     } else if (category == 'word') {
+        removeClassDisableOnCondition(hideWordsBtn);
         element.textContent = document.getElementsByClassName('wordally_word')[number].value;
     }
 }

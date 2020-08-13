@@ -117,6 +117,8 @@ function showTranslationTab(tabId) {
 }
 
 var clipboard;
+var hideTranslationsBtn;
+var hideWordsBtn;
 
 $(document).ready(function(){
     $('[rel=tooltip]').tooltip({ trigger: "hover" });
@@ -140,6 +142,9 @@ $(document).ready(function(){
         createPairOfInputFields()
         createPairOfInputFields()
     }
+
+    hideTranslationsBtn = document.getElementById('hideAllTranslationsBtn');
+    hideWordsBtn = document.getElementById('hideAllWordsBtn');
 });
 
 // mode = normal (A visible, B hidden)
@@ -157,12 +162,14 @@ function clearSectionIfNotEmpty(id) {
 }
 
 function hideAllTranslations() {
+    hideTranslationsBtn.classList.add('disabled');
     $("[data-toggle='tooltip']").tooltip('hide');
     var words = document.getElementsByClassName('wordally_word');
     createTableForSection('hiddenTranslationTabTable', words, 'translation');
 }
 
 function hideAllWords() {
+    hideWordsBtn.classList.add('disabled');
     $("[data-toggle='tooltip']").tooltip('hide');
     var translations = document.getElementsByClassName('wordally_translation');
     createTableForSection('hiddenWordTabTable', translations, 'word');
@@ -193,4 +200,10 @@ function generateUrl() {
 
 function copyToClipBoard(data) {
     document.getElementById('genURLbtn').setAttribute('data-clipboard-text', data)
+}
+
+function removeClassDisableOnCondition(element) {
+    if(element.classList.contains('disabled')) {
+        element.classList.remove('disabled');
+    }
 }
