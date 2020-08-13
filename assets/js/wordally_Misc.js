@@ -131,7 +131,7 @@ $(document).ready(function(){
         var words = params.getAll('word');
         var translations = params.getAll('translation');
 
-        for(var i = 0; i < 3; i++) {
+        for(var i = 0; i < words.length; i++) {
             console.log(words[i] + ' ' + translations[i]);
             createPairOfInputFields(words[i], translations[i]);
         }
