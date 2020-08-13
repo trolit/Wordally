@@ -27,10 +27,16 @@
       <div class="squares square3"></div>
       <div class="container">
         <div class="content-center brand" style="height: 50vh; padding: 60px 0; text-align: center;">
-		      <i class="tim-icons icon-puzzle-10 faa-bounce animated-hover" style="font-size: 60px; margin-bottom: 2%; color: #FBB9B1;"></i><br/>
+		      <i class="tim-icons icon-puzzle-10 faa-bounce animated-hover" style="font-size: 60px; margin-bottom: 2%; color: #C8948D;"></i><br/>
           <h1 class="h1-seo">Wordally</h1>
-          <h5>Move your vocabulary learning experience on higher level</h5>
+          <h5>Bring your vocabulary learning experience on higher level</h5>
         </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12 mb-4">
+        <button type="button" class="btn btn-primary mr-4" data-placement="top" data-toggle="popover" data-trigger="focus" title="What's Wordally?" data-content="Checked solution to effectively learn vocabulary for tests or to improve terminology stock. This scheme was used by Wordally author and by following this idea, it's very easy to learn for e.g 30 words for test. If scheme is used properly, user can improve their foregin language learning skills.">What?</button>
+        <button type="button" class="btn btn-primary" data-placement="top" data-toggle="popover" data-trigger="focus" title="Why should I use it?" data-content="Use it to drastically reduce the time you need to learn vocabulary. You won't forget most words that easy. Additionaly, if you use digital solution, you won't waste sheets of paper when learning that way. Ecological approach ^_^">Why?</button>
       </div>
     </div>
     <div class="main">
@@ -95,6 +101,7 @@
                         </div>
                       </div>
                       <br/>
+                      <br/>
                       <div class="row">
                         <div class="col-md-12">
                           <button class="btn btn-primary next-tab-btn" onclick="changeActiveTab('hiddenTranslationTab')">Next</button>
@@ -116,6 +123,8 @@
                         <div id="hiddenTranslationTabTable" class="col-md-12">
                         </div>
                       </div>
+                      <br/>
+                      <br/>
                       <div class="row">
                         <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('defaultTab')">Back</button>
                         <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all translations" onclick="hideAllTranslations()">Try again</button>
@@ -137,6 +146,8 @@
                         <div id="hiddenWordTabTable" class="col-md-12">
                         </div>
                       </div>
+                      <br/>
+                      <br/>
                       <div class="row">
                         <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('hiddenTranslationTab')">Back</button>
                         <button class="btn btn-info refresh-btn" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Hide all words" onclick="hideAllWords()">Try again</button>
@@ -150,7 +161,6 @@
                           <h2 class="text-center text-muted mb-0">Step 4</h2>
                           <h4 class="text-center">Verification</h4>
                           Test your knowledge by writing word for corresponding translation.<br/>
-                          <small>For better effect, repeat this at least 3 times per day.</small>
                         </div>
                       </div>
                       <br/>
@@ -158,6 +168,7 @@
                         <div id="verifyKnowledgeSection" class="col-md-12">
                         </div>
                       </div>
+                      <br/>
                       <br/>
                       <div class="row">        
                         <div class="col-md-12">
@@ -203,10 +214,11 @@
                         </div>
                       </div>
                       <br/>
+                      <br/>
                       <div class="row">        
                         <div class="col-md-12">
                           <button class="btn btn-primary back-tab-btn" onclick="changeActiveTab('testKnowledgeTab')">Back</button>
-                          <button id="genURLbtn" data-clipboard-text="n/o" class="btn btn-danger generate-url-btn" onclick="generateUrl()" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Click this button to copy URL with words & translations so the next time you use Wordally, you won't have to setup it again.">Generate URL</button>
+                          <button id="genURLbtn" data-clipboard-text="n/o" class="btn btn-danger generate-url-btn" onclick="generateUrl()" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Click this button to copy URL with words & translations so the next time you use Wordally, you won't have to setup vocabulary again.">Generate URL</button>
                         </div>
                       </div>
                     </div>
@@ -223,39 +235,29 @@
    <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <p style="font-size: 20px;">Wordally</p>
-          <h4>Designed with BLK•</h4>
+          <h4>Designed with <a href="https://github.com/creativetimofficial/blk-design-system" target="_blank">BLK•</a></h4>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="blockquote mb-0" style="border: 0px;">
+            <p class="mb-0">We first make our habits, and then our habits make us.</p>
+            <footer class="blockquote-footer">John Dryden</footer>
+          </blockquote>
         </div>
         <div class="col-md-3">
           <ul class="nav">
             <li class="nav-item">
-              <a href="https://creative-tim.com/contact-us" class="nav-link">
+              <a href="https://github.com/trolit/Wordally" target="_blank" class="nav-link">
                 Project repository
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://opensource.org/licenses/MIT" class="nav-link">
+              <a href="https://github.com/trolit/Wordally/blob/master/LICENSE" target="_blank" class="nav-link">
                 License
               </a>
             </li>
           </ul>
-        </div>
-        <div class="col-md-3">
-          <h3 class="title">References</h3>
-          <div class="btn-wrapper profile">
-            <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-              <i class="fab fa-twitter"></i>
-            </a>
-            &nbsp;
-            <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
-              <span class="iconify" data-icon="cib:gulp" data-inline="false" style="font-size: 25px; padding-top: 6px;"></span>
-            </a>
-            &nbsp;
-            <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-              <i class="fab fa-dribbble"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>
