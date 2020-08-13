@@ -12750,10 +12750,10 @@ textarea.form-control {
   .index-page .squares.square2 {
     -webkit-animation: move-left-right 6s infinite;
             animation: move-left-right 6s infinite;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     opacity: 0.4;
-    right: -5%;
+    right: 0;
     top: -12%; }
   .index-page .squares.square3 {
     -webkit-animation: move-left-right 5s infinite;
