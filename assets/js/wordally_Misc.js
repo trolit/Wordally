@@ -128,6 +128,11 @@ $(document).ready(function(){
             console.log(words[i] + ' ' + translations[i]);
             createPairOfInputFields(words[i], translations[i]);
         }
+
+        if(params.get('onlytest') == 'true') {
+            changeActiveTab('testKnowledgeTab');
+            document.getElementById('backToHiddenWordTableBtn').style.display = 'none';
+        }
     } else {
         createPairOfInputFields()
         createPairOfInputFields()

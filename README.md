@@ -11,6 +11,7 @@
 - If you want to check Wordally, click on <a href="https://trolit.github.io/Wordally/?&word=dog&translation=pies&word=cat&translation=kot&word=ogre&translation=ogr&word=pigeon&translation=gołąb&word=monster&translation=potwór&word=fire&translation=ogień&word=kitchen&translation=kuchnia&word=house&translation=dom&word=shoot&translation=strzelać">this link</a> (it includes parameters in URL so you won't have to write words and translations manually, they will be added automatically)
 - Primarily I wanted to make user only type words while translations would be served by Marak's <a href="https://github.com/marak/translate.js/">translate.js</a> library but didn't notice that it's old solution and Google API used there was depracated. Now when Google API is limited to "quota cost", I've decided that Wordally will require to write those translations manually. However, after finishing all steps you can generate URL for your word/translation template and when you use that generated URL JavaScript will will those inputs for you! 
 - Test it on phone:P  
+- Add at the end of generated URL ```&onlytest=true``` param to force Wordally to redirect to tab with verification sequence and hide back button.
 
 <h3>Screenshots</h3>
 
