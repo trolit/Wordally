@@ -1,5 +1,7 @@
 <h2>Wordally</h2>
 
+09.08.2020 - 13.08.2020 (v1.0)
+
 <h3>Description</h3>
 
 <p align="justify">Wordally is digital solution for those who seek efficient way <strong>to learn foreign language vocabulary</strong> for school purposes or to extend terminology stock. Acquire habit to study vocabulary like in Wordally scheme to shorten the time needed to memorize and strengthen memory. Implemented idea comes from author's private experience from learning english words. 
