@@ -7,6 +7,7 @@
     <li><a href="#projectStructure">Project Directory Structure</a></li>
     <li><a href="#notes">Notes</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#techStack">Tech Stack</a></li>
     <li><a href="#references">References</a></li>
     <li><a href="#license">License</a></li>
 </ul>
@@ -93,7 +94,7 @@ assets/
     </tr>
 </table>
 
-<h3>Tech Stack</h3>
+<h3 id = "techStack">Tech Stack</h3>
 <p> This application was built using the following tools/libraries. </p>
 <ul>
  <li> React - JavaScript library for building user interfaces </li>
