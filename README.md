@@ -1,46 +1,85 @@
-<h2>Wordally</h2>
+# Table of Contents
+1. [Abstract](#abstract)
+2. [Description](#description)
+3. [Notes](#notes)
+4. [Screenshots](#screenshots)
+5. [How to Install and Run the Project](#how-to-install-and-run-the-project)
+6. [How to Use the Project](#how-to-use-the-project)
+7. [References](#references)
+8. [License](#license)
+9. [FAQ or Support](#faq-or-support)
+10. [How to Contribute](#how-to-contribute)
 
-09.08.2020 - 13.08.2020 (v1.0)
+<h2 id="abstract">Abstract</h2>
 
-<h3>Description</h3>
+Wordally is a digital tool designed to facilitate efficient and effective vocabulary learning for diverse language learners, bridging the gap between desire and attainment in language acquisition. 
 
-<p align="justify">Wordally is digital solution for those who seek efficient way <strong>to learn foreign language vocabulary</strong> for school purposes or to extend terminology stock. Acquire habit to study vocabulary like in Wordally scheme to shorten the time needed to memorize and strengthen memory. Implemented idea comes from author's private experience from learning english words. 
- 
-> Method relies on 3 steps. In first two, cover one column and try to guess hidden words by looking at visible column, then swap(do the same for opposite column). If you don't know something, don't worry just repeat that step few times. It's also worth to not guess words in the same order. In last step, write translations on sheet of paper(again, don't always write them in the same order) and then try to write all words. It's that simple. By doing that method at least 3 times(with breaks between each try) it's possible to learn terminology in 30 minutes(motivation also matters) :) </p>
+<h2 id="description">Description</h2>
 
-<h3>Notes</h3>
+Wordally, an innovative digital solution, revolutionizes the process of learning foreign language vocabulary, whether for academic advancement or enhancement of personal lexicon. Drawing inspiration from the author's personal journey in English language learning, the platform leverages a three-step method to optimize vocabulary retention and recall, minimizing time investment and maximizing learning outcomes. Users engage in iterative exercises, covering and guessing words, writing translations, and repetitive practice to solidify memory, with potential for substantial vocabulary mastery within a concise 30-minute session.
 
-- If you want to check Wordally, click on <a href="https://trolit.github.io/Wordally/?&word=dog&translation=pies&word=cat&translation=kot&word=ogre&translation=ogr&word=pigeon&translation=gołąb&word=monster&translation=potwór&word=fire&translation=ogień&word=kitchen&translation=kuchnia&word=house&translation=dom&word=shoot&translation=strzelać">this link</a> (it includes parameters in URL so you won't have to write words and translations manually, they will be added automatically)
-- Primarily I wanted to make user only type words while translations would be served by Marak's <a href="https://github.com/marak/translate.js/">translate.js</a> library but didn't notice that it's old solution and Google API used there was depracated. Now when Google API is limited to "quota cost", I've decided that Wordally will require to write those translations manually. However, after finishing all steps you can generate URL for your word/translation template and when you use that generated URL JavaScript will will those inputs for you! 
-- Test it on phone:P  
-- Add at the end of generated URL ```&onlytest=true``` param to force Wordally to redirect to tab with verification sequence and hide back button. <a href="https://trolit.github.io/Wordally/?&word=holiday&translation=urlop/wakacje&word=see&translation=patrzeć&word=practice&translation=ćwiczyć&word=add&translation=dodać&word=fix&translation=poprawić&word=memory&translation=pamięć&word=personally&translation=osobiście&word=sidebar&translation=menu boczne&word=test&translation=testować&word=log in&translation=zalogować się&word=relieve&translation=ulżyć/odciążyć&word=obvious&translation=oczywiste&word=cover&translation=zasłonić&word=manage&translation=zarządzać&word=ask&translation=zapytać&word=screen&translation=ekran&word=skills&translation=umiejętności&word=lazy&translation=leniwy&word=introduce&translation=przedstawić&word=develop&translation=rozwijać&word=experience&translation=doświadczenie&word=request&translation=żądanie&word=command&translation=komenda&word=safe&translation=bezpieczny&word=company&translation=firma&word=button&translation=przycisk&word=surprise&translation=niespodzianka&word=example&translation=przykład&word=sort&translation=sortować&word=field&translation=pole&word=personalization&translation=personalizacja&word=tab&translation=zakładka&word=everything&translation=wszystko&word=letter&translation=list&word=language&translation=język&word=understand&translation=rozumieć&word=validation&translation=walidacja&word=drink&translation=pić&word=success&translation=sukces&word=remember&translation=pamiętać&word=forget&translation=zapomnieć&word=meet&translation=spotkać&word=secure&translation=zabezpieczyć&word=method&translation=metoda&word=attempt&translation=próba&word=customer&translation=klient&word=effect&translation=efekt&word=find&translation=znaleźć&word=change&translation=zmieniać&word=search&translation=wyszukiwać&word=set&translation=ustawiać&word=speak&translation=mówić&word=tell&translation=powiedzieć&word=tools&translation=narzędzia&word=favourite&translation=ulubione&word=describe&translation=opisać&word=suggest&translation=sugerować/proponować&word=work&translation=pracować&word=dependencies&translation=zależności&word=learn&translation=uczyć się&word=tomorrow&translation=jutro&word=rate&translation=ocenić&word=conversation&translation=konwersacja&word=achieve&translation=osiągać&word=found&translation=znaleziony&word=solution&translation=rozwiązanie&word=error&translation=błąd&word=remotely&translation=zdalnie&word=wait&translation=czekać&word=translate&translation=tłumaczyć&word=stay&translation=zostać&word=write&translation=pisać&word=have&translation=mieć&word=get&translation=dostać&onlytest=true">(example)</a>
+<h3 id="notes">Notes</h3>
 
-<h3>Screenshots</h3>
+- Use Wordally by clicking on [this link](https://trolit.github.io/Wordally/).
+- Initially intended to automatically provide translations using Marak's [translate.js](https://github.com/marak/translate.js/) library, Wordally now necessitates manual input of translations due to API limitations. However, Wordally compensates by allowing users to generate URLs for easy sharing and replication of word/translation templates.
 
-| | |
+
+<h3 id="screenshots">Screenshots</h3>
+
+| Step 1: entering words | Step 2: guess word translation |
 | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/1.png" alt="#toadd" width="400" height="243"/> | <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/2.png" alt="#toadd" width="400" height="243"/> |
-| <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/3.png" alt="#toadd" width="400" height="243"/> | <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/4.png" alt="#toadd" width="400" height="243"/> |
-<!-- For image table, it's highly recommended to have the same resolution images. 
- To find best results(no stretches, equal cells), both axis should be adjusted manually. -->
+| <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/1.png" alt="Screenshot 1" width="400" height="243"/> | <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/2.png" alt="Screenshot 2" width="400" height="243"/> |
+| **Step 4: Verification ** | **Step 5: Results** |
+| <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/3.png" alt="Screenshot 3" width="400" height="243"/> | <img src="https://raw.githubusercontent.com/trolit/Wordally/images/images/4.png" alt="Screenshot 4" width="400" height="243"/> |
 
-<h3>References</h3>
+<h3 id="how-to-install-and-run-the-project">How to Install and Run the Project</h3>
 
-- <a href="https://github.com/creativetimofficial/blk-design-system">BLK Design System (Bootstrap 4 Kit)</a>
-- <a href="https://gulpjs.com/">gulp.js</a>
-- <a href="https://nodejs.org/en/">Node.js v12.16.2</a>
-- <a href="https://pixabay.com/vectors/jigsaw-puzzle-game-match-puzzle-1297102/">Wordally logo</a>
-- <a href="https://clipboardjs.com/">clipboard.js</a>
-- <a href="https://l-lin.github.io/font-awesome-animation/">Font Awesome Animation</a>
-- <a href="https://iconify.design/">Iconify icons</a>
-- <a href="https://nucleoapp.com/">Nucleo icons(shared by Creative Tim)</a>
-- <a href="http://www.orangefreesounds.com/message-notification/">Error sound(licensed under CC BY-NC 4.0)</a>
+To install and run this project, follow the steps below:
 
-<h3>License</h3>
+1. Ensure that you have Node.js installed on your machine.
+2. Clone the repository: `git clone https://github.com/username/projectname.git`
+3. Navigate to the project directory: `cd projectname`
+4. Install the required dependencies: `npm install`
+5. Start the project: `npm start`
+   
 
-Wordally is licensed under MIT and is open source :]
+<h3 id="how-to-use-the-project">How to Use the Project</h3>
 
-<br/>
-<br/>
+This section provides a guide on how to use the project:
 
-Template generated using <a href="https://github.com/trolit/EzGitDoc">EzGitDoc</a>
+1. **Explore the Features of the Project:**
+    - **Adding New Vocabulary Words:**
+        - Navigate to the ‘Add Vocabulary’ section in the application.
+        - Type the word in the given field.
+        - Add a translation.
+        - Click on the ‘Add’ button to save the word to your vocabulary list.
+    - **Testing Your Knowledge:**
+        - Move to the ‘Test’ section where you can test your knowledge of the words you’ve added.
+        - You will be presented with a word and asked to provide the translation.
+        - Your answers will be checked, and feedback will be given.
+    - **Viewing Your Result:**
+        - Visit the ‘Result’ section to view your learning progress.
+        - View various metrics such as the number of words learned correctly.
+        - Utilize this information to adjust your learning pace and focus areas.
+
+
+
+<h3 id="references">References</h3>
+
+- [BLK Design System (Bootstrap 4 Kit)](https://github.com/creativetimofficial/blk-design-system)
+- [gulp.js](https://gulpjs.com/)
+- [Node.js v12.16.2](https://nodejs.org/en/)
+- [Wordally logo](https://pixabay.com/vectors/jigsaw-puzzle-game-match-puzzle-1297102/)
+
+<h3 id="license">License</h3>
+
+Wordally is licensed under MIT and is open-source.
+
+<h3 id="faq-or-support">FAQ or Support</h3>
+
+For any issues encountered while using Wordally, please refer to the [official website's](https://trolit.github.io/Wordally/).
+
+<h3 id="how-to-contribute">How to Contribute</h3>
+
+Passionate about enhancing Wordally? Contributions are welcomed! Ensure to follow the guidelines as outlined on the Wordally website to ensure a seamless contribution process. Visit [this link](https://trolit.github.io/Wordally/) for detailed information on how to contribute.
+
